@@ -33,7 +33,7 @@ body {
     var(--saturation, 1%),
     calc(var(--lightness-offset, 0%) + var(--lightness, 51%))
   );
-  color: white;
+  color: rgb(0, 0, 0);
   fill: white;
   text-transform: uppercase;
   border-radius: .25em;
@@ -94,21 +94,35 @@ body {
   transition: transform 250ms linear;
 }
 
-.cell[dataState="active"] {
+
+
+.row {
+  height: 100%;
+
+  flex: 33%;
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+}
+
+
+
+
+.active  {
   border-color: hsl(200, 1%, 34%);
 }
 
-.cell[dataState="wrong"] {
+.wrong {
   border: none;
   background-color: hsl(240, 2%, 23%);
 }
 
-.cell[dataState="wrong-location"] {
+.wrong-location {
   border: none;
   background-color: hsl(49, 51%, 47%);
 }
 
-.cell[dataState="correct"] {
+.correct {
   border: none;
   background-color: hsl(115, 29%, 43%);
 }
